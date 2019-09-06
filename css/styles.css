@@ -60,7 +60,7 @@ a:hover{
   border-radius: 50%;
   align-items: center;
   position: relative;
-  top: 20px;
+  bottom: 20px;
 }
 
 .bio{
