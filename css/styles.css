@@ -1,60 +1,64 @@
-body{
+body {
   margin: 0;
   text-align: center;
 }
 
-h1{
+h1 {
   margin-top: 0;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 50px;
-
+  font-family: 'Press Start 2P', cursive;
+  font-size: 50px;
+  color: #ffffff;
 }
 
-h2{
+h2 {
   font-family: 'Manjari', sans-serif;
   font-size: 50px;
-
 }
 
-h3{
+h3 {
   font-family: 'Manjari', sans-serif;
-    font-size: 35px;
-
+  font-size: 35px;
 }
-p{
+
+p {
   font-family: 'Manjari', sans-serif;
 }
 
-hr{
+hr {
   border: dotted #000000 6px;
   border-bottom: none;
   width: 5%;
   margin: 50px auto 50px auto;
-
 }
 
-a{
+a {
   color: #ffffff;
   font-family: Manjari;
   margin: 10px 20px;
   text-decoration: none;
 }
 
-a:hover{
+a:hover {
   color: #000000;
 }
 
-.Intro{
+.Intro {
   font-size: 30px;
+  color: #ffffff
 }
 
-.top-container{
-  background-color: #66bfbf;
-  padding-top: 100px;
+.top-container {
   position: relative;
 }
 
-.profilePic{
+.IntroText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profilePic {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -63,27 +67,26 @@ a:hover{
   bottom: 20px;
 }
 
-.bio{
+.bio {
   width: 40%;
   margin: auto;
   line-height: 1.5;
   font-size: 20px;
 }
 
-.skill-row{
-  width: 60%;
+.skill-row {
+  width: 75%;
   margin: 100px auto 100px auto;
   text-align: left;
-
 }
 
-.skillsP{
+.skillsP {
   font-family: 'Manjari', sans-serif;
   font-size: 20px;
   line-height: 1.5;
 }
 
-.skillsIMGLeft{
+.skillsIMGLeft {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -92,8 +95,7 @@ a:hover{
   margin-right: 30px;
 }
 
-
-.skillsIMGRight{
+.skillsIMGRight {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -102,22 +104,20 @@ a:hover{
   margin-left: 20px;
 }
 
-.middle-container{
+.middle-container {
   margin: 100px 0;
 }
 
-.tidBit{
+.tidBit {
   width: 40%;
   margin: auto auto 30px auto;
   line-height: 1.5;
   font-size: 15px;
 }
 
-
-.bottom-container{
+.bottom-container {
   background-color: #66bfbf;
   padding: 40px 0 20px;
-
 }
 
 .btn {
@@ -151,14 +151,13 @@ a:hover{
   color: #ffffff;
 }
 
-.topCloud{
+.topCloud {
   position: absolute;
   right: 300px;
   top: 50px;
-
 }
 
-.bottomCloud{
+.bottomCloud {
   position: absolute;
   left: 300px;
   bottom: 300px;
