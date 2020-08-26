@@ -1,3 +1,7 @@
+#title{
+
+}
+
 body {
   margin: 0;
   text-align: center;
@@ -5,24 +9,22 @@ body {
 
 h1 {
   margin-top: 0;
-  font-family: 'Press Start 2P', cursive;
   font-size: 50px;
+}
+
+h1, h2, h3, p {
+  font-family: 'Manjari', sans-serif;
   color: #ffffff;
 }
 
 h2 {
-  font-family: 'Manjari', sans-serif;
   font-size: 50px;
 }
 
 h3 {
-  font-family: 'Manjari', sans-serif;
   font-size: 35px;
 }
 
-p {
-  font-family: 'Manjari', sans-serif;
-}
 
 hr {
   border: dotted #000000 6px;
@@ -42,123 +44,39 @@ a:hover {
   color: #000000;
 }
 
+.container-fluid{
+  position: relative;
+}
+
+.imageStyles{
+  opacity: 0.97;
+}
+
 .Intro {
   font-size: 30px;
   color: #ffffff
 }
 
-.top-container {
-  position: relative;
-}
-
-.IntroText {
+.Intro-Text {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
 }
 
-.profilePic {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  align-items: center;
-  position: relative;
-  bottom: 20px;
+#AboutMe{
 }
 
-.bio {
-  width: 40%;
-  margin: auto;
-  line-height: 1.5;
-  font-size: 20px;
+.Biography{
+  padding: 6% 15%;
+  background-color: #222831;
 }
 
-.skill-row {
-  width: 75%;
-  margin: 100px auto 100px auto;
+.Section-Titles{
+  position: absolute;
   text-align: left;
 }
 
-.skillsP {
-  font-family: 'Manjari', sans-serif;
-  font-size: 20px;
-  line-height: 1.5;
-}
-
-.skillsIMGLeft {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  align-items: center;
-  float: left;
-  margin-right: 30px;
-}
-
-.skillsIMGRight {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  align-items: center;
-  float: right;
-  margin-left: 20px;
-}
-
-.middle-container {
-  margin: 100px 0;
-}
-
-.tidBit {
-  width: 40%;
-  margin: auto auto 30px auto;
-  line-height: 1.5;
-  font-size: 15px;
-}
-
-.bottom-container {
-  background-color: #66bfbf;
-  padding: 40px 0 20px;
-}
-
-.btn {
-  background: #11cdd4;
-  background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
-  background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
-  background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
-  background-image: -o-linear-gradient(top, #11cdd4, #11999e);
-  background-image: linear-gradient(to bottom, #11cdd4, #11999e);
-  -webkit-border-radius: 8;
-  -moz-border-radius: 8;
-  border-radius: 8px;
-  font-family: 'Manjari', sans-serif;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background: #30e3cb;
-  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
-  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
-  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
-  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
-  background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
-  text-decoration: none;
-}
-
-.copyright {
-  color: #ffffff;
-}
-
-.topCloud {
-  position: absolute;
-  right: 300px;
-  top: 50px;
-}
-
-.bottomCloud {
-  position: absolute;
-  left: 300px;
-  bottom: 300px;
+.carousel-item{
+  background-color: #000000;
 }
