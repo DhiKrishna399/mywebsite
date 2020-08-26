@@ -1,6 +1,4 @@
-#title{
-
-}
+#title {}
 
 body {
   margin: 0;
@@ -25,7 +23,6 @@ h3 {
   font-size: 35px;
 }
 
-
 hr {
   border: dotted #000000 6px;
   border-bottom: none;
@@ -44,11 +41,11 @@ a:hover {
   color: #000000;
 }
 
-.container-fluid{
+.container-fluid {
   position: relative;
 }
 
-.imageStyles{
+.imageStyles {
   opacity: 0.97;
 }
 
@@ -64,19 +61,46 @@ a:hover {
   transform: translate(-50%, 50%);
 }
 
-#AboutMe{
-}
+#AboutMe {}
 
-.Biography{
-  padding: 6% 15%;
+.Biography {
+  padding: 15% 10%;
   background-color: #222831;
 }
 
-.Section-Titles{
+.Section-Titles {
   position: absolute;
   text-align: left;
+  padding-top: 6%;
+  padding-left: 10%;
 }
 
-.carousel-item{
+.profile-pic {
+  width: 80%;
+  height: auto;
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+
+}
+
+@media (max-width: 1000px) {
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    align-items: center;
+    position: relative;
+    bottom: 20px;
+  }
+}
+
+.introduction {
+  font-family: 'Manjari', sans-serif;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.carousel-item {
   background-color: #000000;
 }
