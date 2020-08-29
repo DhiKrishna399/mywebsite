@@ -7,7 +7,9 @@
   <link href="https://fonts.googleapis.com/css?family=Manjari|Press+Start+2P|Sacramento&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="icon" href="favicon.ico">
+
 </head>
 
 <body>
@@ -194,17 +196,91 @@
   </section>
 
   <section id="Projects">
+    <div class="Section-Titles">
+      <h2>Experience & Projects</h>
+    </div>
+    <div class="Slider-Container">
+      <div class="swiper-container" style="padding-top: 6rem;">
+        <div class="swiper-wrapper">
 
+          <div class="swiper-slide" style="width:400px;">
+            <div class="card">
+              <div class="sliderText">
+                <h3>Project 1</h3>
+              </div>
+              <div class="content">
+                <p> Something about my project here!</p>
+                <a href="#">GitHub Link</a>
+              </div>
+            </div>
+          </div>
 
+        <div class="swiper-slide" style="width:400px;">
+            <div class="card">
+              <div class="sliderText">
+                <h3>Project 2</h3>
+              </div>
+              <div class="content">
+                <p> Something about my project here!</p>
+                <a href="#">GitHub Link</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" style="width:400px;">
+            <div class="card">
+              <div class="sliderText">
+                <h3>Project 3</h3>
+              </div>
+              <div class="content">
+                <p> Something about my project here!</p>
+                <a href="#">GitHub Link</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" style="width:400px;">
+            <div class="card">
+              <div class="sliderText">
+                <h3>Project 4</h3>
+              </div>
+              <div class="content">
+                <p> Something about my project here!</p>
+                <a href="#">GitHub Link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="swiper.min.js"></script>
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+          rotate: 30,
+          stretch: 0,
+          depth: 400,
+          modifier: 1,
+          slideShadows: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      });
+    </script>
   </section>
 
 
   <div class="bottom-container">
-     <a class="footer-link" href="https://www.linkedin.com/in/dhivakar-krishnamoorthi-09bb95159/">LinkedIn</a>
-     <a class="footer-link" href="https://www.instagram.com/brownguytakesphotos/?hl=en">Instagram</a>
-     <a class="footer-link" href="https://github.com/DhiKrishna399">GitHub</a>
-     <p class="copyright">© 2020 Dhiva Krishna.</p>
-   </div>
+    <a class="footer-link" href="https://www.linkedin.com/in/dhivakar-krishnamoorthi-09bb95159/">LinkedIn</a>
+    <a class="footer-link" href="https://www.instagram.com/brownguytakesphotos/?hl=en">Instagram</a>
+    <a class="footer-link" href="https://github.com/DhiKrishna399">GitHub</a>
+    <p class="copyright">© 2020 Dhiva Krishna.</p>
+  </div>
 
 
 
