@@ -40,7 +40,7 @@ a:hover {
   color: #000000;
 }
 
-.body{
+.body {
   overflow: scroll;
 }
 
@@ -125,6 +125,8 @@ a:hover {
   text-align: left;
 }
 
+#Skills {}
+
 .Section-Container-Skills {
   padding: 15% 10%;
   background-color: #222831;
@@ -170,7 +172,6 @@ a:hover {
   border-radius: 30%;
   height: 125px;
   width: 125px;
-
 }
 
 .image-container .box .flutter {
@@ -181,13 +182,12 @@ a:hover {
   visibility: visible;
 }
 
-.image-container .box .details .content{
+.image-container .box .details .content {
   top: 20px;
   font-size: 30px;
   color: #ffffff;
   padding-top: 40px;
 }
-
 
 @media (max-width: 1000px) {
   .image-container {
@@ -211,8 +211,9 @@ a:hover {
     width: 100px;
     height: 100px;
   }
-
 }
+
+#Projects {}
 
 .Slider-Container {
   margin: 0;
@@ -220,12 +221,11 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background-color: #222831;
 }
-/*Need to fix min-height for mobile devices */
 
-@media (max-width: 900px){
+/*Need to fix min-height for mobile devices */
+@media (max-width: 900px) {
   .Slider-Container {
     min-height: 35vh;
   }
@@ -238,15 +238,15 @@ a:hover {
   height: 500px;
   margin: 0 auto;
   align-items: center;
-
+  border-radius: 40px;
 }
 
 .card .content {
   width: 300px;
-  padding: 30px;
   box-sizing: border-box;
   color: #000000;
-
+  text-align: left;
+  padding-top: 30px;
 }
 
 .card .sliderText {
@@ -257,15 +257,16 @@ a:hover {
   justify-content: center;
   align-items: center;
   background: #000000;
-
+  border-radius: 40px;
 }
 
-.card .sliderText h3 p {
-  font-size: 3rem;
+.card .sliderText h3 {
+  font-size: 2rem;
 }
 
 .card .content p {
   color: #000000;
+  font-size:
 }
 
 .card .content a {
@@ -277,19 +278,39 @@ a:hover {
   color: #262626;
 }
 
-.swiper-slide:nth-child(2) .sliderText {
-  background-color: #351267;
+.swiper-slide:nth-child(1) .sliderText {
+  background-color: #438a5e;
 }
 
+.swiper-slide:nth-child(2) .sliderText {
+  background-color: #00b8a9;
+}
 
+.swiper-slide:nth-child(3) .sliderText {
+  background-color: #e84a5f;
+}
 
-.bottom-container{
+.swiper-slide:nth-child(4) .sliderText {
+  background-color: #f38181;
+}
+
+.swiper-slide:nth-child(5) .sliderText {
+  background-color: #a6acec;
+}
+
+.swiper-slide:nth-child(6) .sliderText {
+  background-color: #3282b8;
+}
+
+.swiper-slide:nth-child(7) .sliderText {
+  background-color: #aedefc;
+}
+
+.swiper-slide:nth-child(8) .sliderText {
+  background-color: #f08a5d;
+}
+
+.bottom-container {
   background-color: #222831;
   padding: 40px 0 20px;
-
-}
-
-
-.carousel-item {
-  background-color: #000000;
 }
