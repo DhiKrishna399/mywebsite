@@ -279,23 +279,24 @@ a:hover {
 }
 
 .swiper-slide:nth-child(1) .sliderText {
-  background-color: #438a5e;
+  background-color: #f08a5d;
 }
 
 .swiper-slide:nth-child(2) .sliderText {
-  background-color: #00b8a9;
+  background-color: #f08a5d;
 }
 
 .swiper-slide:nth-child(3) .sliderText {
-  background-color: #e84a5f;
+  background-color: #00b8a9;
 }
 
 .swiper-slide:nth-child(4) .sliderText {
-  background-color: #f38181;
+  background-color: #438a5e;
 }
 
 .swiper-slide:nth-child(5) .sliderText {
-  background-color: #a6acec;
+  background-color: #438a5e;
+ 
 }
 
 .swiper-slide:nth-child(6) .sliderText {
@@ -307,7 +308,15 @@ a:hover {
 }
 
 .swiper-slide:nth-child(8) .sliderText {
-  background-color: #f08a5d;
+  background-color: #a6acec;
+}
+
+swiper-slide:nth-child(9) .sliderText {
+  background-color: #e6abcc;
+}
+
+swiper-slide:nth-child(10) .sliderText {
+  background-color: #91d9e8;
 }
 
 .bottom-container {
