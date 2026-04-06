@@ -1,375 +1,554 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="utf-8">
-  <title>Dhiva Krishna</title>
-  <link href="https://fonts.googleapis.com/css?family=Manjari|Press+Start+2P|Sacramento&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dhiva Krishna - Engineer & Entrepreneur building products people love, from iOS apps to full-stack ventures">
+  <title>Dhiva Krishna | Engineer & Entrepreneur</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&family=SF+Pro+Text:wght@400;500;600&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="icon" href="favicon.ico">
-
 </head>
-
 <body>
+  <button class="theme-toggle glass-effect" id="themeToggle" aria-label="Toggle theme">
+    <svg class="sun-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
 
-  <section id="title">
-    <!--Bootstrap Scripts-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-    <!--Navbar Code-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="">Dhiva Krishna</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#footer">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#pricing">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#cta">Projects</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </section>
-
-  <!--Splash Page Section -->
-  <section id="SplashPage">
-    <div class="container-fluid p-0">
-      <div class="imageStyles">
-        <img src="images/infinityLight.jpg" class="img-fluid p-0" alt="infinityRoom">
-      </div>
-      <div class="Intro-Text">
-        <h1>I'm Dhiva</h1>
-        <p class="Intro"> A programmer, creator, and thrill seeker. </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Me Section -->
-  <section id="AboutMe">
-    <div class="container-fluid p-0">
-      <div class="Section-Titles">
-        <h2>About Me</h>
-      </div>
-      <div class="Section-Container">
-        <div class="row">
-          <div class="col-lg-6 p-0">
-            <!--Insert profile picture circular-->
-            <img class="profile-pic" src="images/IMG_8973.jpeg" alt="Dhiva-Krishna">
-          </div>
-          <div class="col-lg-6 p-0">
-            <!--Introduction, school, interest, "Seek Discomfort"-->
-            <div class="introduction">
-              I live by the philosophy that comfort hinders growth and as a result, I’m always looking for my next opportunity to get out of my comfort zone, learn new skills, and take part in new experiences!
-              <br></br>
-              I am currently a senior undergrad student at UC San Diego majoring in Computer Science. I love working on projects that allow lots of room for creativity in order to make intuitive and amazing solutions.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!--Skills, Languages, Intersts Ratings-->
-  <section id="Skills">
-    <div class="Section-Titles">
-      <h2>Skills and Interests</h>
-    </div>
-    <div class="Section-Container-Skills">
-      <div class="image-container">
-        <div class="box">
-          <img class="imgBox" src="images/java.png" alt="Java">
-          <div class="details">
-            <div class="content">
-              <h5> Java </h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <img class="imgBox" src="images/python.png" alt="Python">
-          <div class="details">
-            <div class="content">
-              <h5> Python </h5>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <img class="imgBox" src="images/html5.png" alt="HTML">
-          <div class="details">
-            <div class="content">
-              <h5> HTML5 </h5>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <img class="imgBox" src="images/css-2.png" alt="CSS">
-          <div class="details">
-            <div class="content">
-              <h5> CSS3 </h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <img class="imgBox" src="images/javascript.png" alt="JavaScript">
-          <div class="details">
-            <div class="content">
-              <h5> JS </h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <img class="imgBox" src="images/android.png" alt="Android">
-          <div class="details">
-            <div class="content">
-              <h5> Android </h5>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <img class="imgBox" src="images/IOS.png" alt="IOS">
-          <div class="details">
-            <div class="content">
-              <h5> iOS </h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <img class="imgBox flutter" src="images/flutter.png" alt="Flutter">
-          <div class="details">
-            <div class="content">
-              <h5> Flutter </h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <img class="imgBox" src="images/github.png" alt="GitHub">
-          <div class="details">
-            <div class="content">
-              <h5> Git </h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <img class="imgBox" src="images/datascience.png" alt="Data Science">
-          <div class="details">
-            <div class="content">
-              <h5> Data Science </h5>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <img class="imgBox" src="images/ML.png" alt="Machine Learning">
-          <div class="details">
-            <div class="content">
-              <h5> Machine Learning </h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <img class="imgBox" src="images/camera.png" alt="Camera">
-          <div class="details">
-            <div class="content">
-              <h5> Photography </h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="Projects">
-    <div class="Section-Titles">
-      <h2>Experience & Projects</h>
-    </div>
-    <div class="Slider-Container">
-      <div class="swiper-container" style="padding-top: 20%;">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide" style="width:400px;">
-            <div class="card">
-              <div class="sliderText">
-                <h3>Veeva Systems <br>
-                  Software Engineer
-                  <br><br>
-                  March 2023 - Present
-                </h3>
-              </div>
-              <div class="content">
-                <p> Working as an iOS Engineer for the Veeva CRM iPad app!
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide" style="width:400px;">
-            <div class="card">
-              <div class="sliderText">
-                <h3>Veeva Systems <br>
-                  Associate Software Engineer
-                  <br><br>
-                  August 2021 - March 2023
-                </h3>
-              </div>
-              <div class="content">
-                <p> Happy to join Veeva Systems as my first full time role after graduating from college! I
-                  work on the Territory Feedback feature for the Veeva CRM iPad app. This includes new feature development, 
-                  enhancements and upgrades, and handling defects and bugs.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide" style="width:400px;">
-            <div class="card">
-              <div class="sliderText">
-                <h3>MarketMinds</h3>
-              </div>
-              <div class="content">
-                <p> Working on creating a SAAS product that uses GPT-3 to generate marketing content for customers.
-                  Users can simply tell us the name and description of their product, and we will generate marketing copy 
-                  that they can use to advertise/promote their products!
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide" style="width:400px;">
-            <div class="card">
-              <div class="sliderText">
-                <h3>Omnicell R&D Intern
-                  <br><br>
-                  Summer 2020
-                </h3>
-              </div>
-              <div class="content">
-                <p> This year, I'm virtually back at Omnicell and helped reconfigure Omnicell’s job scheduling platform.
-                  Instead of having the job information stored in memory, I worked with the Quartz.NET framework and
-                  was able to store the data into an SQL database.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide" style="width:400px;">
-            <div class="card">
-              <div class="sliderText">
-                <h3>Omnicell Innovation Intern
-                  <br><br>
-                  Summer 2019
-                </h3>
-
-              </div>
-              <div class="content">
-                <p> This was my first internship and I was on the Innovation Engineering team.
-                  I got to create Android Application using Xamarin Forms that scans and decodes barcodes from medications
-                  and sends the data over bluetooth to the XR2 cabinets! </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide" style="width:400px;">
-            <div class="card">
-              <div class="sliderText">
-                <h3>How Well Do Drinks and Grades Mix?
-                  <br><br>
-                  UCSD - Data Science
-                </h3>
-
-              </div>
-              <div class="content">
-                <p> In this project for my Data Science class at UCSD, my group and I wanted to see if the
-                  the college myth about drinking and academic performance were true.
-                  I learned a lot about data science here and this class inspired me to continue working on new data science projects.</p>
-                <a href="https://github.com/DhiKrishna399/Grades-and-Drinks">View</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide" style="width:400px;">
-            <div class="card">
-              <div class="sliderText">
-                <h3>Walk-Walk Revolution
-                  <br><br>
-                  UCSD - Software Engineering
-                </h3>
-              </div>
-              <div class="content">
-                <p>
-                    Experienced what it's like to work with a team under an AGILE devleopment approach.
-                    We created an Android app where users can track stats about their walks and runs using the Google Fit API.
-                    You can even invite friends to join your walks and view other people's favorite routes.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide" style="width:400px;">
-            <div class="card">
-              <div class="sliderText">
-                <h3>AR Ruler</h3>
-              </div>
-              <div class="content">
-                <p> When Apple released the new updates to the Measure app and announced AR Kit,
-                    I had to see what it was all about. Here's a rudimentary version of an AR measuring
-                    tool. </p>
-                <a href="https://github.com/DhiKrishna399/AR_Ruler">GitHub</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <script src="swiper.min.js"></script>
-    <script>
-      var swiper = new Swiper('.swiper-container', {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflowEffect: {
-          rotate: 30,
-          stretch: 0,
-          depth: 400,
-          modifier: 1,
-          slideShadows: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-        },
-      });
-    </script>
-  </section>
-
-
-  <div class="bottom-container">
-    <a class="footer-link" href="https://www.linkedin.com/in/dhivakar-krishnamoorthi-09bb95159/">LinkedIn</a>
-    <a class="footer-link" href="https://www.instagram.com/brownguytakesphotos/?hl=en">Instagram</a>
-    <a class="footer-link" href="https://github.com/DhiKrishna399">GitHub</a>
-    <p class="copyright">© 2023 Dhiva Krishna.</p>
+  <div class="ambient-background">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
   </div>
 
+  <nav class="floating-nav glass-effect">
+    <a href="#hero" class="nav-item active">Home</a>
+    <a href="#about" class="nav-item">About</a>
+    <a href="#experience" class="nav-item">Experience</a>
+    <a href="#connect" class="nav-item">Connect</a>
+  </nav>
 
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-badge glass-effect">
+          <span class="badge-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+          </span>
+          <span>Engineer & Entrepreneur</span>
+        </div>
+        
+        <h1 class="hero-name">Dhiva Krishna</h1>
+        <p class="hero-title">Builder. Engineer. Entrepreneur.</p>
+        <p class="hero-tagline">Building products people love — from polished iOS apps to full-stack ventures.</p>
+        
+        <div class="hero-actions">
+          <a href="#experience" class="action-button primary glass-effect">
+            <span>View Experience</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7M17 7H7M17 7V17"/>
+            </svg>
+          </a>
+          <a href="#connect" class="action-button secondary glass-effect">
+            <span>Get in Touch</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="device-frame glass-effect">
+          <div class="device-notch"></div>
+          <div class="device-screen">
+            <div class="code-editor">
+              <div class="editor-header">
+                <div class="editor-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <span class="editor-filename">App.swift</span>
+              </div>
+              <pre class="code-content"><code id="typed-code"></code><span class="cursor">|</span></pre>
+            </div>
+          </div>
+          <div class="device-home-indicator"></div>
+        </div>
+      </div>
+    </section>
 
+    <section class="about" id="about">
+      <div class="section-header">
+        <span class="section-label">About</span>
+        <h2 class="section-title">Philosophy</h2>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-card glass-effect">
+          <div class="about-text">
+            <p class="lead">Great software should feel invisible.</p>
+            <p>I believe in the intersection of technology and the liberal arts. Every pixel, every interaction, every transition should feel inevitable—as if it couldn't have been designed any other way.</p>
+            <p>With over 4 years of professional iOS experience, I've honed my craft building enterprise applications used by thousands. But my passion extends beyond mobile — I'm driven by the challenge of taking ideas from zero to one.</p>
+            <p>Whether it's architecting scalable iOS features, building a full-stack AI platform, or figuring out product-market fit, I thrive at the intersection of engineering and entrepreneurship. I'm always looking for the next problem worth solving.</p>
+          </div>
+        </div>
+        
+        <div class="skills-container">
+          <div class="skill-card glass-effect">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7.826 10.083a.784.784 0 0 0-.468-.175h-.701v4.198h.701a.786.786 0 0 0 .469-.175c.155-.117.233-.292.233-.525v-2.798c0-.233-.078-.408-.234-.525zM19.236 3H4.764A1.765 1.765 0 0 0 3 4.765v14.47A1.765 1.765 0 0 0 4.764 21h14.471A1.766 1.766 0 0 0 21 19.235V4.765A1.766 1.766 0 0 0 19.236 3zM9.075 13.059c0 .705-.466 1.291-1.073 1.524H9.5v.827H5.498v-.827c-.607-.233-1.073-.819-1.073-1.524v-2.118c0-.705.466-1.291 1.073-1.524H5v-.828h3.5v.828c.607.233 1.073.819 1.073 1.524v2.118h.002zm5.003 1.641h-.98l-1.175-3.457v3.457h-.98V9.59h.98l1.175 3.457V9.59h.98v5.11zm5.403-5.11h-2.857v1.467h1.905v.827h-1.905v1.989h2.857v.827h-3.835V9.59h3.835v.827z"/>
+              </svg>
+            </div>
+            <h3>Swift</h3>
+            <p>Primary language</p>
+          </div>
+          
+          <div class="skill-card glass-effect">
+            <div class="skill-icon swiftui-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+              </svg>
+            </div>
+            <h3>SwiftUI</h3>
+            <p>Declarative UI</p>
+          </div>
+          
+          <div class="skill-card glass-effect">
+            <div class="skill-icon uikit-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm2 2h8v2H8V8zm0 4h8v2H8v-2zm0 4h5v2H8v-2z"/>
+              </svg>
+            </div>
+            <h3>UIKit</h3>
+            <p>Native frameworks</p>
+          </div>
+          
+          <div class="skill-card glass-effect">
+            <div class="skill-icon arch-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3>Architecture</h3>
+            <p>MVVM, Clean Code</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="experience" id="experience">
+      <div class="section-header">
+        <span class="section-label">Career</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      
+      <div class="timeline">
+        <article class="timeline-card glass-effect">
+          <div class="timeline-period">
+            <span class="period-badge current">Current</span>
+            <span class="period-dates">Feb 2025 — Present</span>
+          </div>
+          <div class="timeline-info">
+            <h3 class="role-title">Founder & Lead Engineer</h3>
+            <p class="company-name">Trendzilla Labs</p>
+            <ul class="role-highlights">
+              <li>Designing and building a full-stack AI powered social listening platform from the ground up, leveraging machine learning to surface actionable brand and sales analytics for marketing professionals (<a href="https://trendzillalabs.com" target="_blank" rel="noopener noreferrer">trendzillalabs.com</a>)</li>
+              <li>Launched a closed beta with 10+ early adopters, managing product roadmap and feature prioritization based on direct user feedback</li>
+            </ul>
+            <div class="tech-stack">
+              <span class="tech-tag">Full-Stack</span>
+              <span class="tech-tag">AI/ML</span>
+              <span class="tech-tag">Product</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="timeline-card glass-effect">
+          <div class="timeline-period">
+            <span class="period-badge current">Current</span>
+            <span class="period-dates">2023 — Present</span>
+          </div>
+          <div class="timeline-info">
+            <h3 class="role-title">Software Engineer</h3>
+            <p class="company-name">Veeva Systems</p>
+            <ul class="role-highlights">
+              <li>Architected the X-Pages feature for 10+ enterprise customers to embed custom scripts and AI-powered tools directly into the iOS app — automating repetitive workflows and reducing manual query time by 80%</li>
+              <li>Spearheaded Location-Based Targeting for Territory Feedback, giving customers the ability to manage sales reps by region for the first time; modernized underlying legacy APIs, improving request handling and app responsiveness</li>
+              <li>Rewrote core iOS app components to support the in-house Vault data model while preserving full backward compatibility with legacy Salesforce data, enabling seamless migration of 125 customers with zero workflow disruption</li>
+              <li>Built reusable JavaScript templates for Vault CRM iOS that delivered out-of-the-box reporting functionality satisfying 90% of customer needs, significantly reducing reliance on custom development engagements</li>
+            </ul>
+            <div class="tech-stack">
+              <span class="tech-tag">Swift</span>
+              <span class="tech-tag">UIKit</span>
+              <span class="tech-tag">Core Data</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">REST APIs</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="timeline-card glass-effect">
+          <div class="timeline-period">
+            <span class="period-dates">2021 — 2023</span>
+          </div>
+          <div class="timeline-info">
+            <h3 class="role-title">Associate Software Engineer</h3>
+            <p class="company-name">Veeva Systems</p>
+            <ul class="role-highlights">
+              <li>Promoted from Associate to Software Engineer within 18 months in recognition of technical contributions and ownership</li>
+              <li>Introduced Bulk Editing mode for Territory Feedback, enabling users to edit up to 50 accounts simultaneously and cutting API calls by 90%, meaningfully improving app responsiveness</li>
+              <li>Built a dynamic JSON-based territory data reporting widget, giving clients self-serve access to sales performance metrics and eliminating backend dependency for routine reporting tasks</li>
+            </ul>
+            <div class="tech-stack">
+              <span class="tech-tag">Swift</span>
+              <span class="tech-tag">Objective-C</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">JSON</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="timeline-card glass-effect">
+          <div class="timeline-period">
+            <span class="period-dates">Summer 2020</span>
+          </div>
+          <div class="timeline-info">
+            <h3 class="role-title">R&D Engineering Intern</h3>
+            <p class="company-name">Omnicell</p>
+            <ul class="role-highlights">
+              <li>Migrated job scheduling data from cloud services to a structured SQL database, improving system reliability and eliminating data loss during service restarts</li>
+              <li>Integrated the QuartzMin API to build an internal web-based job management tool, reducing Engineering team troubleshooting time and improving operational efficiency</li>
+            </ul>
+            <div class="tech-stack">
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">Quartz.NET</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="timeline-card glass-effect">
+          <div class="timeline-period">
+            <span class="period-dates">Summer 2019</span>
+          </div>
+          <div class="timeline-info">
+            <h3 class="role-title">Innovation Engineering Intern</h3>
+            <p class="company-name">Omnicell</p>
+            <ul class="role-highlights">
+              <li>Built an Android app for Zebra TC52 devices to scan and decode medication barcodes, streamlining inventory workflows and reducing manual processes in clinical environments</li>
+            </ul>
+            <div class="tech-stack">
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">Android</span>
+              <span class="tech-tag">Python</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="connect" id="connect">
+      <div class="section-header centered">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Always open to discussing iOS development, new opportunities, or interesting projects.</p>
+      </div>
+      
+      <div class="connect-cards">
+        <a href="https://github.com/DhiKrishna399" class="connect-card glass-effect" target="_blank" rel="noopener noreferrer">
+          <div class="connect-icon github">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </div>
+          <div class="connect-info">
+            <h3>GitHub</h3>
+            <p>View my code</p>
+          </div>
+          <svg class="connect-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+          </svg>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/dhivakar-krishnamoorthi-09bb95159/" class="connect-card glass-effect" target="_blank" rel="noopener noreferrer">
+          <div class="connect-icon linkedin">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </div>
+          <div class="connect-info">
+            <h3>LinkedIn</h3>
+            <p>Connect professionally</p>
+          </div>
+          <svg class="connect-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+          </svg>
+        </a>
+        
+        <a href="mailto:hello@dhivakrishna.com" class="connect-card glass-effect">
+          <div class="connect-icon email">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </div>
+          <div class="connect-info">
+            <h3>Email</h3>
+            <p>Say hello</p>
+          </div>
+          <svg class="connect-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer glass-effect">
+    <p>Designed & Built with care</p>
+    <p class="copyright">&copy; 2024 Dhiva Krishna</p>
+  </footer>
+
+  <script>
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.about-card, .skill-card, .timeline-card, .connect-card, .section-header').forEach(el => {
+      observer.observe(el);
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    const navItems = document.querySelectorAll('.nav-item');
+    const sections = document.querySelectorAll('section');
+
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navItems.forEach(item => item.classList.remove('active'));
+          const activeNav = document.querySelector(`.nav-item[href="#${entry.target.id}"]`);
+          if (activeNav) activeNav.classList.add('active');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    sections.forEach(section => navObserver.observe(section));
+
+    const heroName = document.querySelector('.hero-name');
+    heroName.addEventListener('mousemove', (e) => {
+      const rect = heroName.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      heroName.style.setProperty('--mouse-x', `${x}%`);
+      heroName.style.setProperty('--mouse-y', `${y}%`);
+    });
+
+    document.querySelectorAll('.glass-effect').forEach(el => {
+      el.addEventListener('mousemove', (e) => {
+        const rect = el.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        el.style.setProperty('--mouse-x', `${x}%`);
+        el.style.setProperty('--mouse-y', `${y}%`);
+      });
+    });
+
+    const themeToggle = document.getElementById('themeToggle');
+    
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      setTheme(newTheme);
+    });
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        setTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+
+    const codeSnippets = [
+      `<span class="cm">// Why do Swift devs wear glasses?</span>
+<span class="cm">// They can't C#</span>
+
+<span class="kw">struct</span> <span class="type">DadJoke</span>: <span class="type">View</span> {
+    <span class="kw">var</span> body: <span class="kw">some</span> <span class="type">View</span> {
+        <span class="type">Text</span>(<span class="str">"😎"</span>)
+            .<span class="fn">font</span>(.<span class="prop">largeTitle</span>)
+    }
+}`,
+      `<span class="kw">func</span> <span class="fn">getCoffee</span>() -> <span class="type">Coffee</span> {
+    <span class="kw">while</span> !<span class="prop">awake</span> {
+        <span class="fn">drink</span>(<span class="type">Coffee</span>())
+    }
+    <span class="kw">return</span> .<span class="fn">espresso</span>(shots: <span class="lit">3</span>)
+}
+
+<span class="cm">// TODO: Remember to sleep</span>
+<span class="cm">// sometime this week</span>`,
+      `<span class="kw">@Observable</span>
+<span class="kw">class</span> <span class="type">MyBrain</span> {
+    <span class="kw">var</span> bugs = <span class="type">Int</span>.<span class="prop">max</span>
+    <span class="kw">var</span> coffee = <span class="lit">0</span>
+    
+    <span class="kw">func</span> <span class="fn">fix</span>(<span class="param">bug</span>: <span class="type">Bug</span>) {
+        bugs -= <span class="lit">1</span>
+        bugs += <span class="lit">99</span> <span class="cm">// 🙃</span>
+    }
+}`,
+      `<span class="cm">// How do iOS devs exercise?</span>
+<span class="cm">// They do Swift-ups! 💪</span>
+
+<span class="kw">let</span> pun = <span class="type">Pun</span>(
+    <span class="param">quality</span>: .<span class="prop">questionable</span>,
+    <span class="param">laughs</span>: <span class="lit">0</span>
+)`,
+      `<span class="kw">struct</span> <span class="type">Weekend</span>: <span class="type">View</span> {
+    <span class="kw">@State var</span> relaxing = <span class="lit">false</span>
+    
+    <span class="kw">var</span> body: <span class="kw">some</span> <span class="type">View</span> {
+        <span class="kw">if</span> <span class="type">Date</span>().<span class="fn">isWeekend</span> {
+            <span class="type">Text</span>(<span class="str">"Time to code!"</span>)
+        }
+        <span class="cm">// Wait, that's not right</span>
+    }
+}`,
+      `<span class="cm">// Roses are red</span>
+<span class="cm">// Violets are blue</span>
+<span class="cm">// Unexpected '}' on line 32</span>
+
+<span class="kw">func</span> <span class="fn">poetry</span>() {
+    <span class="fn">print</span>(<span class="str">"I love Swift"</span>)
+    <span class="fn">print</span>(<span class="str">"Swift loves me"</span>)
+    <span class="fn">print</span>(<span class="str">"Segfault"</span>)
+}`
+    ];
+
+    const typedCode = document.getElementById('typed-code');
+    let snippetIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let currentText = '';
+
+    function getPlainText(html) {
+      const temp = document.createElement('div');
+      temp.innerHTML = html;
+      return temp.textContent || temp.innerText;
+    }
+
+    function typeCode() {
+      const currentSnippet = codeSnippets[snippetIndex];
+      const plainText = getPlainText(currentSnippet);
+      
+      if (!isDeleting) {
+        currentText = plainText.substring(0, charIndex + 1);
+        charIndex++;
+        
+        let htmlIndex = 0;
+        let textIndex = 0;
+        let result = '';
+        
+        while (textIndex < currentText.length && htmlIndex < currentSnippet.length) {
+          if (currentSnippet[htmlIndex] === '<') {
+            const closeIndex = currentSnippet.indexOf('>', htmlIndex);
+            result += currentSnippet.substring(htmlIndex, closeIndex + 1);
+            htmlIndex = closeIndex + 1;
+          } else {
+            result += currentSnippet[htmlIndex];
+            htmlIndex++;
+            textIndex++;
+          }
+        }
+        
+        typedCode.innerHTML = result;
+        
+        if (charIndex === plainText.length) {
+          setTimeout(() => { isDeleting = true; typeCode(); }, 3000);
+          return;
+        }
+      } else {
+        charIndex--;
+        currentText = plainText.substring(0, charIndex);
+        
+        if (charIndex === 0) {
+          isDeleting = false;
+          snippetIndex = (snippetIndex + 1) % codeSnippets.length;
+          setTimeout(typeCode, 500);
+          return;
+        }
+        
+        let htmlIndex = 0;
+        let textIndex = 0;
+        let result = '';
+        
+        while (textIndex < currentText.length && htmlIndex < currentSnippet.length) {
+          if (currentSnippet[htmlIndex] === '<') {
+            const closeIndex = currentSnippet.indexOf('>', htmlIndex);
+            result += currentSnippet.substring(htmlIndex, closeIndex + 1);
+            htmlIndex = closeIndex + 1;
+          } else {
+            result += currentSnippet[htmlIndex];
+            htmlIndex++;
+            textIndex++;
+          }
+        }
+        
+        typedCode.innerHTML = result;
+      }
+      
+      const speed = isDeleting ? 20 : Math.random() * 50 + 30;
+      setTimeout(typeCode, speed);
+    }
+
+    setTimeout(typeCode, 1500);
+  </script>
 </body>
-
 </html>
